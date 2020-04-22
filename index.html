@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consultant Application Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Consultant Application Form</h1>
+    <form action="" method="GET">
+      <h2>Applicant Details</h2>
+      <div class="item">
+        <p>Name <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input type="text" placeholder="First" name="firstName" required />
+          <input type="text" placeholder="Last" name="lastName" required />
+        </div>
+      </div>
+      <div class="item">
+        <p>Berkeley Email <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input type="email" required />
+        </div>
+        <p>Phone <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input
+            type="tel"
+            patter
+            n="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+            name="phoneNumber"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="dropdown">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option disabled selected value></option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="item">
+        <p>Major(s) <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input type="text" name="major" required />
+        </div>
+        <p>Minor</p>
+        <div class="item">
+          <input type="text" name="minor" />
+        </div>
+      </div>
+      <!-- <table>
+      <tr>
+        <td>Major</td>
+        <td>Minor</td>
+      </tr>
+      <tr>
+        <td class="item"><input type="text" name="user"></td>
+        <td class="item"><input type="text" name="email"></td>
+      </tr>
+    </table> -->
+      <div class="dropdown">
+        <label for="graduation"
+          >Intended Graduation Year
+          <span aria-hidden="true" class="required">*</span></label
+        ><br />
+        <select id="graduation" name="gradYear" required>
+          <option disabled selected value></option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+      <div class="dropdown">
+        <label for="bbs"
+          >How did you hear about BBS?
+          <span aria-hidden="true" class="required">*</span></label
+        >
+        <select id="bbs" name="hearBBS" required>
+          <option disabled selected value></option>
+          <option value="Tabling on Sproul">Tabling on Sproul</option>
+          <option value="Flyer">Flyer</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Friend">Friend</option>
+          <option value="Haas-Sponsored Orgs List"
+            >Haas-Sponsored Orgs List</option
+          >
+          <option value="Current BBS Member"> Current BBS Member</option>
+        </select>
+      </div>
+      <h2>Project Concentration Preferences</h2>
+      <p>
+        Please distribute 100 points between each of the 5 project
+        concentrations, giving more points to the concentrations you have the
+        most interest in. Give 0 points to projects you have no interest in.
+        Ensure your total points add up to 100.
+        <br />
+        We strongly recommend familiarizing yourself with our 5 project
+        concentrations so you can make a more informed decision - read about the
+        5 concentrations at
+        <a href="http://www.berkeleybusinesssociety.com/about"
+          >berkeleybusinesssociety.com/about</a
+        >.
+      </p>
+      <br />
+      <div class="item">
+        <p>Corporate <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="Points (totals 100)"
+            name="corporate"
+            required
+          />
+        </div>
+        <p>Finance <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="Points (totals 100)"
+            name="finance"
+            required
+          />
+        </div>
+        <p>Marketing <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="Points (totals 100)"
+            name="marketing"
+            required
+          />
+        </div>
+        <p>Nonprofit <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="Points (totals 100)"
+            name="nonprofit"
+            required
+          />
+        </div>
+        <p>Startup <span aria-hidden="true" class="required">*</span></p>
+        <div class="item">
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="Points (totals 100)"
+            name="startup"
+            required
+          />
+        </div>
+      </div>
+      <h2>BBS Application</h2>
+      <h3>Resume</h3>
+      <p>
+        We highly recommend including your GPA on your resume. Upload the file
+        as a 1-page PDF. Any extra pages will not be considered.
+        <span aria-hidden="true" class="required">*</span>
+      </p>
+      <div>
+        <label for="myfile">Select a file:</label>
+        <input class="noBorder" type="file" name="resume" required />
+      </div>
+      <h3>Essay Questions</h3>
+      <p>
+        Name an existing product (can be tangible, non-tangible, a service,
+        etc.). How would you improve it? (250 words)
+        <span aria-hidden="true" class="required">*</span>
+      </p>
+      <div class="essay">
+        <textarea rows="15" cols="100" name="essay1" required></textarea>
+      </div>
+      <br />
+      <p>
+        Fast forward 10 years from today. Now, walk us through what your (ideal)
+        daily routine looks like. (200 words)
+        <span aria-hidden="true" class="required">*</span>
+      </p>
+      <div class="essay">
+        <textarea rows="15" cols="100" name="essay2" required></textarea>
+      </div>
+      <h2>Availability</h2>
+      <p>
+        Availability for Group Interviews (Saturday, February 1st) (Pick at
+        least 7) <span aria-hidden="true" class="required">*</span>
+      </p>
+      <div class="question">
+        <div class="question-answer checkbox-item">
+          <div>
+            <input
+              type="checkbox"
+              value="none"
+              id="check_9"
+              name="group830"
+              required
+            />
+            <label for="check_9" class="check"
+              ><span>8:30 AM - 9:20 AM </span></label
+            >
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              value="none"
+              id="check_10"
+              name="group920"
+              required
+            />
+            <label for="check_10" class="check"
+              ><span>9:20 AM - 10:10 AM </span></label
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <p>
+        Availability for Superday (Monday, February 3rd) (Pick at least 4)
+        <span aria-hidden="true" class="required">*</span>
+      </p>
+      <div class="question">
+        <div class="question-answer checkbox-item">
+          <div>
+            <input
+              type="checkbox"
+              value="none"
+              id="check_1"
+              name="super830"
+              required
+            />
+            <label for="check_1" class="check"
+              ><span>8:30 AM - 9:20 AM </span></label
+            >
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              value="none"
+              id="check_2"
+              name="super920"
+              required
+            />
+            <label for="check_2" class="check"
+              ><span>9:20 AM - 10:10 AM </span></label
+            >
+          </div>
+        </div>
+      </div>
+      <h2>Additional Information</h2>
+      <p>
+        If there is anything else you feel we should know, please tell us here.
+      </p>
+      <div class="essay">
+        <textarea rows="15" cols="100" name="moreInfo"></textarea>
+      </div>
+      <div class="btn-block">
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
